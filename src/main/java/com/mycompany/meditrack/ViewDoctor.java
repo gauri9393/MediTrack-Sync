@@ -131,7 +131,7 @@ public class ViewDoctor extends javax.swing.JFrame {
         try{
             DefaultTableModel model=(DefaultTableModel)Table.getModel();
           Class.forName("com.mysql.cj.jdbc.Driver");
-          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","gauri@mysql");
+          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","yourPassword");
             PreparedStatement pst=con.prepareStatement("SELECT * FROM doctor");
                  ResultSet rs=pst.executeQuery();
           while(rs.next()){
