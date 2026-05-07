@@ -150,7 +150,7 @@ public class GetAppointment extends javax.swing.JFrame {
         String Date=date.getText();
         try{
           Class.forName("com.mysql.cj.jdbc.Driver");
-          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","gauri@mysql");
+          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","yourPassword");
           String query="INSERT INTO appointment VALUES(?,?,?)";
           PreparedStatement pst=con.prepareStatement(query);
           pst.setInt(1, pid );
