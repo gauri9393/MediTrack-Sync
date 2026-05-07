@@ -170,7 +170,7 @@ public class AddPatient extends javax.swing.JFrame {
         String dname=doctorname.getText();
         try{
           Class.forName("com.mysql.cj.jdbc.Driver");
-          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","gauri@mysql");
+          Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospital","root","yourPassword");
           String query="INSERT INTO patient VALUES(?,?,?,?)";
           PreparedStatement pst=con.prepareStatement(query);
           pst.setInt(1, patientid );
